@@ -1,0 +1,6 @@
+**/node_modules/
+*/.gitignore
+
+# Gatsby Artifacts
+website/.cache
+website/public

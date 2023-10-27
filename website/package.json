@@ -1,0 +1,53 @@
+{
+  "name": "poo-patrol-clarksville",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Official website for Poo Patrol located in Greater Clarksville Area (TN).",
+  "author": {
+    "name": "Johnny Dickson",
+    "contact": {
+      "email": "johnnydicksoncode@gmail.com"
+    }
+  },
+  "keywords": [
+    "gatsby",
+    "tailwind",
+    "shadcn"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit",
+    "format:check": "npx prettier -c src/",
+    "format:write": "npx prettier --write src/",
+    "deploy": "npm run clean && npm run build && gh-pages -d public"
+  },
+  "dependencies": {
+    "gatsby": "^5.12.4",
+    "gatsby-plugin-image": "^3.12.3",
+    "gatsby-plugin-sharp": "^5.12.3",
+    "gatsby-plugin-sitemap": "^6.12.3",
+    "gatsby-source-filesystem": "^5.12.1",
+    "gatsby-transformer-sharp": "^5.12.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "autoprefixer": "^10.4.16",
+    "gatsby-plugin-postcss": "^6.12.0",
+    "gh-pages": "^6.0.0",
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "^3.3.5",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.2.2"
+  }
+}
