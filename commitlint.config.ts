@@ -27,8 +27,8 @@ const Configuration: UserConfig = {
     'scope-max-length': [Warning, 'always', 36],
     'scope-min-length': [Error, 'always', 0],
     'scope-enum': [Warning, 'always', [
-      'page', 'section', 'styling', 'post'
-      'ux'
+      'page', 'section', 'styling', 'post',
+      'ux', 'setup'
     ]],
     'subject-case': [Warning, 'always', 'start-case'],
     'subject-empty': [Error, 'never'],
@@ -39,7 +39,7 @@ const Configuration: UserConfig = {
       'FEAT', 'FIX', 
       'REFAC', 'REV', 
       'TEST', 'FE', 
-      'OPS'
+      'OPS', 'PM'
     ]],
     'type-case': [Error, 'always', 'upper-case'],
     'type-empty': [Error, 'never'],
