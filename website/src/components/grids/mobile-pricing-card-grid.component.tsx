@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { PACKAGE_PRICES } from '../../config/pricing.config';
-import PriceCard from '../cards/pricing-card.component';
+import { PACKAGE_PRICES } from '@/config/pricing.config';
+import PriceCard from '@/components/cards/pricing-card.component';
 
 export default function MobileCardGrid() {
   return (

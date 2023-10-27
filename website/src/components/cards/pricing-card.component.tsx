@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PackageDetails } from '@/lib/types';
+import { PackageDetails, PriceDetail } from '../../lib/types';
 
 import PromoBadge from '../badges/promo-badge.component';
 import IconListItem from '../items/icon-list-item.component';
@@ -112,7 +112,7 @@ export default function PriceCard({
             space-y-4
           '
         >
-         {details.map((detail) => (
+         {details.map((detail: PriceDetail) => (
            <IconListItem 
             icon={detail.icon}
             text={detail.text}

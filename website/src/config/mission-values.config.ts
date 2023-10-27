@@ -1,5 +1,5 @@
 import { ArrowUp, LockIcon, ArrowBigDownDash, LucideIcon } from "lucide-react";
-import type { MissionValue } from '../lib/types';
+import type { MissionValue } from '@/types';
 
 
 export const MISSION_VALUES: MissionValue[]  = [

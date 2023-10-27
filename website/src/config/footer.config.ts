@@ -1,4 +1,4 @@
-import { NavItem } from "@/lib/types";
+import { NavItem } from "@/types";
 
 export const FOOTER_NAV_LINKS: NavItem[] = [
   {

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form"
 import {
   bookingFormSchema,
   BookingFormSchema
-} from '@/lib/schemas/booking-form-schema.zod';
+} from '../../lib/schemas/booking-form-schema.zod';
 
 import { useToast } from "@/components/ui/use-toast"
 import { Button } from "@/components/ui/button"

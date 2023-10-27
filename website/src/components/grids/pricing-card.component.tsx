@@ -1,6 +1,6 @@
 import React from 'react';
-import PriceCard from '../cards/pricing-card.component';
-import WeeklyPackageCard from '../cards/weekly-package-card.component';
+import PriceCard from '@/components/cards/pricing-card.component';
+import WeeklyPackageCard from '@/components/cards/weekly-package-card.component';
 
 export default function CardGrid() {
   return (

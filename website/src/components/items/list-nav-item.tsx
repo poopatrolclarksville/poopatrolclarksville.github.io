@@ -1,5 +1,5 @@
 import React from 'react'
-import type { NavItem } from '@/lib/types'
+import type { NavItem } from '@/types'
 
 export default function ListNavItem(
   { navItem }: { navItem: NavItem }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Logo from '../misc/logo.component';
+import Logo from '@/components/misc/logo.component';
 
 export default function DesktopNavbar() {
   return (

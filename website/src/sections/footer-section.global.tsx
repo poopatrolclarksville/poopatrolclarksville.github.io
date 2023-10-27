@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FOOTER_NAV_LINKS } from '../config/footer.config';
+import { FOOTER_NAV_LINKS } from '@/config/footer.config';
 
 import { Mail, PhoneCall, Facebook } from "lucide-react";
 import ListNavItem from "@/components/items/list-nav-item";

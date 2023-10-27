@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { PackagePrice } from '../lib/types';
+import type { PackagePrice } from '@/types';
 
 import { Check } from 'lucide-react';
 

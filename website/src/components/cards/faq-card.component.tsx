@@ -1,5 +1,5 @@
 import React from 'react'
-import { FAQuestion } from '@/lib/types'
+import { FAQuestion } from '../../lib/types'
 
 export default function FAQCard(
   { faq }: { faq: FAQuestion }
@@ -11,9 +11,9 @@ export default function FAQCard(
       className='
         p-4
         rounded-lg
-        border-gray-100
+        border-gray-200
         shadow-xl
-        shadow-gray-100
+        shadow-gray-200
       '
     >
       <h2

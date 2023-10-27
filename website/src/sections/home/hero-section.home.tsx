@@ -1,5 +1,5 @@
 import React from 'react';
-import DesktopNavbar from '../../components/bars/desktop-navbar.component';
+import DesktopNavbar from '@/components/bars/desktop-navbar.component';
 import { StaticImage } from 'gatsby-plugin-image';
 import { CalendarClock } from 'lucide-react';
 

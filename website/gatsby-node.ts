@@ -7,12 +7,12 @@ export const onCreateWebpackConfig = (
     resolve: {
       alias: {
         "@/components": path.resolve(__dirname, "src/components"),
-        "@/utils": path.resolve(__dirname, "src/lib/utils"),
-        "@/types": path.resolve(__dirname, "src/lib/types"),
+        // "@/utils": path.resolve(__dirname, "src/lib/utils.ts"),
+        "@/types": path.resolve(__dirname, "src/lib/types.ts"),
         "@/schemas": path.resolve(__dirname, "src/lib/schemas"),
         "@/config": path.resolve(__dirname, "src/config"),
         "@/styles": path.resolve(__dirname, "src/styles"),
-        "@/sections": path.resolve(__dirname, "src/sections")
+        "@/sections": path.resolve(__dirname, "src/sections"),
       },
     },
   })

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import FAQCard from '../cards/faq-card.component'
-import { FAQS } from '../../config/faqs.config';
+import FAQCard from '@/components/cards/faq-card.component'
+import { FAQS } from '@/config/faqs.config';
 
 export default function FAQGrid() {
   return (
