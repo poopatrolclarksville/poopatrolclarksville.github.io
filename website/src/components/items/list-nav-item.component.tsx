@@ -1,11 +1,12 @@
 import React from 'react'
-import type { NavItem } from '@/types'
+import { type LinkDetails } from '@/lib/types';
 
 export default function ListNavItem(
-  { navItem }: { navItem: NavItem }
+  { navItem }: { navItem: LinkDetails }
 ) {
-  const { href, linkText } = navItem;
 
+  const { href, text } = navItem;
+  
   return (
     <li>
       <a
@@ -16,7 +17,7 @@ export default function ListNavItem(
           text-gray-600
         "
       >
-        {linkText}
+        <p>{text}</p>
       </a>
     </li>
   )

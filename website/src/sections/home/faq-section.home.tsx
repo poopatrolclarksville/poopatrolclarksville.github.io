@@ -9,6 +9,7 @@ export default function FAQSection() {
         py-16
         flex
         flex-col
+        tablet:px-16
         desktop:px-16
         desktop:py-32
       '
@@ -50,11 +51,11 @@ export default function FAQSection() {
       <div
         className='
           hidden
-          tablet:block
           border-t-1
           mt-12
           w-[45vw]
           border-t
+          desktop:block
         '
       />
       <FAQGrid />

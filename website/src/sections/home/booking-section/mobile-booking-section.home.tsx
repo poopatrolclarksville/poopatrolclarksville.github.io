@@ -3,18 +3,22 @@ import BookingForm from '@/components/forms/booking-form.component';
 
 export default function MobileBookingSection() {
   return (
-    <section className='
-      px-4
-      py-32
-      grid
-      grid-cols-1
-      gap-16
-    '>
+    <section 
+      className='
+          px-4
+          py-32
+          grid
+          grid-cols-1
+          gap-16
+          tablet:px-16
+        '
+      >
       <div className='text-center'>
         <h2 className='
           px-4
           pb-4
           text-5xl
+          tablet:text-6xl
           font-bold
           text-gray-900
         '>

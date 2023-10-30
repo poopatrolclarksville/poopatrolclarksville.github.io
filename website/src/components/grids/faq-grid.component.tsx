@@ -7,12 +7,12 @@ export default function FAQGrid() {
   return (
     <div
       className='
+        py-16
         grid
         grid-cols-1
         gap-y-16
         desktop:grid-cols-2
-        gdesktop:gap-8
-        py-16
+        desktop:gap-8
       '
     >
     {FAQS.map((faq) => <FAQCard faq={faq}/>)}

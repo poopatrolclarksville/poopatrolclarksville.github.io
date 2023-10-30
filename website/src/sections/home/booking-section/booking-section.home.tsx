@@ -5,18 +5,20 @@ import MobileBookingSection from './mobile-booking-section.home';
 
 export default function BookingSection() {
 
-  let isMobileOrTabletDevice = window.innerWidth < 600;
+  let isMobileOrTabletDevice = window.innerWidth <= 1280; 
   
   return isMobileOrTabletDevice ? <MobileBookingSection /> : 
     (
-      <section className='
-      px-4
-      py-32
-      desktop:px-16
-      desktop:py-64
-      desktop:grid
-      desktop:grid-cols-2
-    '>
+      <section 
+        className='
+          px-4
+          py-32
+          desktop:px-16
+          desktop:py-64
+          desktop:grid
+          desktop:grid-cols-2
+        '
+      >
       <BookingForm /> 
       <div className='
         flex

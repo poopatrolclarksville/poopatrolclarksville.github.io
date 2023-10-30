@@ -19,6 +19,7 @@ export default function IconListItem({
         text-clip
         font-light
         text-gray-600
+        tablet:text-xl
       '
     >
       {icon}

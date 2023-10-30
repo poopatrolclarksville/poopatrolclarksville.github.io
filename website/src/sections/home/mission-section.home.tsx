@@ -11,7 +11,7 @@ export default function MissionSection() {
         px-4
         py-32
         laptop:grid-cols-2
-        laptop:px-8
+        laptop:px-16
         laptop:py-64
       '
     >  
@@ -23,18 +23,16 @@ export default function MissionSection() {
           laptop:max-w-xl
         '
       >
-        <div>
-          <h1
-            className='
-              text-5xl
-              laptop:text-8xl 
-              font-bold
-              text-gray-900 
-            '
-          >
-            Our Mission.
-          </h1>
-        </div>
+      <h1
+          className='
+            text-6xl
+            laptop:text-8xl 
+            font-bold
+            text-gray-900 
+          '
+        >
+          Our Mission.
+        </h1>
         <p
           className='
             py-16
@@ -48,12 +46,14 @@ export default function MissionSection() {
           et feugiat blandit at. In mi viverra elit nunc.
         </p>
       </header>
-      <dl 
+      <dl
         className='
           grid 
-          grid-cols-1 
-          gap-y-16
-          pt-
+          grid-cols-1
+          gap-y-24 
+          tablet:gap-y-24
+          py-16
+          tablet:px-12
         '
       >
         {MISSION_VALUES.map((value) => (

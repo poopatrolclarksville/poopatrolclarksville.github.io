@@ -14,6 +14,7 @@ export default function PricingSection() {
         items-center
         px-4
         py-32
+        laptop:px-16
         desktop:px-0
         desktop:h-96
         desktop:py-64
@@ -30,6 +31,7 @@ export default function PricingSection() {
       <h1
         className='
           text-5xl
+          tablet:text-6xl
           desktop:text-7xl 
           font-bold
         '

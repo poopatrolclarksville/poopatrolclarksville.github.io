@@ -11,9 +11,9 @@ export default function FAQCard(
       className='
         p-4
         rounded-lg
-        border-gray-200
-        shadow-xl
-        shadow-gray-200
+        border-gray-300
+        shadow-lg
+        shadow-gray-300
       '
     >
       <h2
@@ -24,6 +24,7 @@ export default function FAQCard(
           text-2xl
           font-bold
           text-gray-900
+          laptop:text-5xl
         '
       >
         {title}
@@ -32,7 +33,7 @@ export default function FAQCard(
         className='
           text-xl
           font-light
-          leading-snug
+          leading-relaxed
           text-gray-600
           desktop:line-clamp-[8]
           desktop:text-clip

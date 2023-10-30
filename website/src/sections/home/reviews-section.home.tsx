@@ -10,6 +10,7 @@ export default function ReviewsSection() {
         items-center
         justify-center
         bg-gray-50
+        tablet:px-16
         laptop:px-0
         laptop:h-96
         laptop:py-64
@@ -17,7 +18,7 @@ export default function ReviewsSection() {
     >
       <div 
         className='
-          laptop:max-w-5xl 
+          laptop:max-w-5xl
           laptop:container
         '
       >
@@ -64,7 +65,12 @@ export default function ReviewsSection() {
               >
                 John Doe
               </div>
-              <svg viewBox='0 0 2 2' width={3} height={3} aria-hidden='true' className='fill-gray-900'>
+              <svg 
+                viewBox='0 0 2 2' 
+                width={4} 
+                height={4} 
+                aria-hidden='true' 
+                className='fill-gray-900'>
                 <circle cx={1} cy={1} r={1} />
               </svg>
               <div 

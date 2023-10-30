@@ -1,16 +1,16 @@
-import { NavItem } from "@/types";
+import { type LinkDetails } from "@/lib/types"
 
-export const FOOTER_NAV_LINKS: NavItem[] = [
+export const FOOTER_NAV_LINKS: LinkDetails[] = [
   {
     href: '#',
-    linkText: 'Our Mission',
+    text: 'Our Mission',
   },
   {
     href: '#',
-    linkText: 'Service Pricing',
+    text: 'Service Pricing',
   },
   {
     href: '#',
-    linkText: 'Customer Reviews',
+    text: 'Customer Reviews',
   },
 ]

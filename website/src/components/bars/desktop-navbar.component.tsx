@@ -1,57 +1,49 @@
 import React from 'react';
 
+import { MAIN_NAV_LINKS } from '@/config/navbar-links.config';
+import NavItem from '../items/nav-item.component';
+
 import Logo from '@/components/misc/logo.component';
 
 export default function DesktopNavbar() {
   return (
     <div
       className='
-      z-10
-      flex
-      w-full
-      items-center
-      justify-between
-      bg-transparent
-      py-8
-      mobile:hidden
-    '>
+        hidden
+        z-10
+        bg-transparent
+        w-full
+        tablet:space-y-8
+        tablet:py-8
+        desktop:py-8
+        items-center
+        tablet:flex
+        tablet:flex-col
+        desktop:flex-row
+        desktop:justify-between
+      '
+    >
       <Logo />
       <nav
         className='
-        w-full
-        laptop:px-8
-        desktop:px-8
-      '>
+          w-full
+          laptop:px-8
+          desktop:px-8
+        '
+      >
         <ul
           className='
-          flex
-          items-center
-          justify-around
-          laptop:text-xl
-          font-extralight
-          text-gray-50
-        '>
-          <li>
-            <a href='#about-us'>Our Mission</a>
-          </li>
-          <li>
-            <a href='#our-process'>How It Works</a>
-          </li>
-          <li>
-            <a href='#pricing'>Pricing</a>
-          </li>
-          <li>
-            <a href='#customer-reviews'>Reviews</a>
-          </li>
-          <li>
-            <a href='#book-appointment'>Request Service</a>
-          </li>
-          <li>
-            <a href='#frequently-asked-questions'>FAQs</a>
-          </li>
-          <li>
-            <a href='#contact-information'>Contact Us</a>
-          </li>
+            flex
+            items-center
+            justify-around
+            laptop:text-xl
+            font-extralight
+            text-gray-50
+          '
+        >
+        {MAIN_NAV_LINKS.map((navItem) => 
+          <NavItem navItem={navItem} />
+        )}
         </ul>
       </nav>
     </div>

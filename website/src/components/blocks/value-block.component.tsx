@@ -11,7 +11,8 @@ export default function ValueBlock(
     <div key={name} className='relative pl-16'>
       <dt
         className='
-          text-4xl 
+          text-4xl
+          laptop:text-5xl
           font-semibold 
         text-gray-900
         '
@@ -39,10 +40,11 @@ export default function ValueBlock(
       </dt>
       <dd
         className='
-          mt-2 
+          mt-4
           text-2xl
           leading-10
         text-gray-600
+          font-light
         '
       >
         {description}

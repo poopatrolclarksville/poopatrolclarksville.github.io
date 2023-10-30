@@ -42,9 +42,9 @@ export default function PriceCard({
         >
           <h1
             className='
-              text-3xl
               font-bold
-              text-indigo-600
+            text-indigo-600
+              text-3xl
             '
           >
             {packageType}
@@ -69,6 +69,7 @@ export default function PriceCard({
             py-6
             font-light
             text-gray-600
+            tablet:text-xl
           '
         >
          {description}
@@ -76,11 +77,12 @@ export default function PriceCard({
         <p
           className='
            text-gray-600
+            tablet:text-xl
           '
         >
           <span
             className='
-              text-3xl
+              text-4xl
               font-semibold
               text-gray-900
             '

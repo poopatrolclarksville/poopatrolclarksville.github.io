@@ -12,9 +12,9 @@ type FAQuestion = {
   body: string
 }
 
-type NavItem = {
+type LinkDetails = {
   href: string
-  linkText: string
+  text: string
 }
 
 type PriceDetail = {
@@ -35,7 +35,7 @@ type PackageDetails = {
 export {
   MissionValue,
   FAQuestion,
-  NavItem,
+  LinkDetails,
   PriceDetail,
   PackageDetails,
 }

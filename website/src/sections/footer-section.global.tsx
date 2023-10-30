@@ -1,9 +1,9 @@
 import React from "react";
 
 import { FOOTER_NAV_LINKS } from '@/config/footer.config';
-
 import { Mail, PhoneCall, Facebook } from "lucide-react";
-import ListNavItem from "@/components/items/list-nav-item";
+
+import ListNavItem from "@/components/items/list-nav-item.component";
 
 export default function Footer() {
   return (
@@ -12,6 +12,7 @@ export default function Footer() {
         bg-gray-50
         px-4
         py-32
+        tablet:px-16
       "
     >
       <div
@@ -19,7 +20,9 @@ export default function Footer() {
           grid
           grid-cols-1
           laptop:grid-cols-3
-          gap-16
+          gap-y-24
+          desktop:gap-y-0
+          desktop:gap-16
         "
       >
         {/* Contact Info Section */}
@@ -43,7 +46,8 @@ export default function Footer() {
             <PhoneCall size={28} />
             <p
               className="
-                text-xl
+                text-lg
+                tablet:text-2xl
                 font-extralight
                 text-gray-600
               "
@@ -62,8 +66,8 @@ export default function Footer() {
             <Mail size={28} />
             <p
               className="
-                pl-4
-                text-xl
+                text-lg
+                tablet:text-2xl
                 font-extralight
                 text-gray-600
               "
@@ -91,7 +95,8 @@ export default function Footer() {
             </a>
             <p
               className="
-                text-xl
+                text-lg
+                tablet:text-2xl
                 font-extralight
                 text-gray-600
               "
@@ -115,8 +120,8 @@ export default function Footer() {
         {/* Navigation Links */}
         <aside
           className="
-            tablet:border-x
-            tablet:px-8
+            desktop:px-8
+            desktop:border-x
           "
         >
           <h2
