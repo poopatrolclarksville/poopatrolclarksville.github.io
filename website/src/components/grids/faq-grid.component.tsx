@@ -11,8 +11,8 @@ export default function FAQGrid() {
         grid
         grid-cols-1
         gap-y-16
-        desktop:grid-cols-2
-        desktop:gap-8
+        laptop:grid-cols-2
+        laptop:gap-8
       '
     >
     {FAQS.map((faq) => <FAQCard faq={faq}/>)}

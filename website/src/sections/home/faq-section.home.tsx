@@ -10,8 +10,8 @@ export default function FAQSection() {
         flex
         flex-col
         tablet:px-16
-        desktop:px-16
-        desktop:py-32
+        laptop:px-16
+        laptop:py-32
       '
     >
       <header
@@ -19,32 +19,37 @@ export default function FAQSection() {
           text-clamp
           text-center
           px-4
+          space-y-16
           tablet:px-0
-          desktop:text-left
-          desktop:max-w-7xl
-          desktop:pr-16
+          laptop:text-left
+          laptop:max-w-7xl
+          laptop:pr-16
+          laptop:space-y-8
         '
       >
         <div>
-          <h1
+          <h2
             className='
-            font-bold
-            text-5xl
-            desktop:text-7xl 
-            text-gray-900 
-            '>
+              font-bold
+              text-4xl
+              tablet:text-5xl
+              laptop:text-7xl 
+              text-gray-900
+            '
+          >
             Frequently Asked Questions.
-          </h1>
-          <span>.</span>
+          </h2>
         </div>
         <p
           className='
-          text-5xl
-          font-extralight
-          leading-snug
+          text-3xl
+          font-light
+          leading-loose
           text-gray-600
+          tablet:text-5xl
         '>
-          Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar
+          Quis tellus eget adipiscing convallis sit sit eget aliquet 
+          quis. Suspendisse eget egestas a elementum pulvinar
           et feugiat blandit at. In mi viverra elit nunc.
         </p>
       </header>
@@ -55,7 +60,7 @@ export default function FAQSection() {
           mt-12
           w-[45vw]
           border-t
-          desktop:block
+          laptop:block
         '
       />
       <FAQGrid />

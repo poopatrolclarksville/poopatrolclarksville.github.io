@@ -5,7 +5,7 @@ import NavItem from '../items/nav-item.component';
 
 import Logo from '@/components/misc/logo.component';
 
-export default function DesktopNavbar() {
+export default function Navbar() {
   return (
     <div
       className='
@@ -29,6 +29,7 @@ export default function DesktopNavbar() {
           w-full
           laptop:px-8
           desktop:px-8
+          laptop:h-full
         '
       >
         <ul

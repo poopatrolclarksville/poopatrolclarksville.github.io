@@ -1,15 +1,24 @@
 import React from 'react';
 
+import { PACKAGE_PRICES } from '@/config/pricing.config';
+import PromoBadge from '../badges/promo-badge.component';
 import PricingCardBodyContent from './body/pricing-card-body-content.component';
+import PriceCard from './price-card.component';
 
 interface PriceCardProps {
   hasBadge?: boolean;
 }
 
-export default function WeeklyPackageCard({ hasBadge = false }: PriceCardProps) {
+const weeklyPkg = PACKAGE_PRICES[0];
+const twiceWeeklyPkg = PACKAGE_PRICES[1];
+const everyOtherWeekPkg = PACKAGE_PRICES[2];
+
+export default function WeeklyPackageCard({ hasBadge = true }: PriceCardProps) {
   return (
     <div
       className='
+        px-4
+        pt-8
         flex
         flex-col
         rounded-xl
@@ -19,12 +28,13 @@ export default function WeeklyPackageCard({ hasBadge = false }: PriceCardProps) 
         shadow-gray-200
       '
     >
-      <header className='p-8'>
+      <header>
         <div
           className='
             flex 
             items-center
             justify-between
+            px-6
           '
         >
           <h1
@@ -36,50 +46,35 @@ export default function WeeklyPackageCard({ hasBadge = false }: PriceCardProps) 
           >
             Weekly Packages
           </h1>
-          {hasBadge ? (
-            <div
-              className='
-                rounded
-                bg-indigo-100
-                px-8
-                py-4
-                text-indigo-900
-              '
-            >
-              <p
-                className='
-                  text-xl
-                  font-medium            
-                '
-              >
-                Most Popular
-              </p>
-            </div>
-          ) : null}
+            {hasBadge ? <PromoBadge label='Most Popular'/> : null}
         </div>
       </header>
-      <div
-        className='
-          space-between 
-          flex 
-          items-center
-          py-4
-        '
+      <div 
+        className="
+          flex
+          laptop:py-16
+        "
       >
-        <PricingCardBodyContent hasLeftBorder={true} />
-        <PricingCardBodyContent />
-        <PricingCardBodyContent hasRightBorder={true} />
+        <PriceCard
+          hasPackageType={false}
+          isContained={false}
+          servicePackage={weeklyPkg}
+        />
+
+        <PriceCard
+          hasPackageType={false}
+          isContained={false}
+          servicePackage={twiceWeeklyPkg}
+          hasLeftBorder 
+          hasRightBorder
+        />
+
+        <PriceCard
+          hasPackageType={false}
+          isContained={false}
+          servicePackage={everyOtherWeekPkg} 
+        />
       </div>
     </div>
   );
 }
-
-// pricing: {
-//   weekly: 50.0,
-//   twiceWeekly: 75.0,
-//   biWeekly: 33.0,
-//   oneTime: 40.0,
-//   deoderizing: 36.0,
-//   initCleanFee: 25.0,
-// },
-

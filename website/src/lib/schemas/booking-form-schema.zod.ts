@@ -1,12 +1,9 @@
 import { z } from 'zod'
 
 export const bookingFormSchema = z.object({
-  firstName: z.string()
-    .min(2)
-    .max(35),
-
+  firstName: z.string().min(2).max(35),
+  lastName: z.string().min(2).max(25),
   email: z.string().email(),
-
   serviceType: z.enum([
     'Weekly', 
     'Twice-Weekly', 
@@ -14,9 +11,7 @@ export const bookingFormSchema = z.object({
     'One-Time',
     'Deoderize'
   ]),
-
-  message: z
-    .string()
+  message: z.string()
     .min(10, {
       message: "Message must be at least 10 characters.",
     })

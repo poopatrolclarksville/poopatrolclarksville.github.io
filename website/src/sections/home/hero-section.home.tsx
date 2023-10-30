@@ -1,5 +1,5 @@
 import React from 'react';
-import DesktopNavbar from '@/components/bars/desktop-navbar.component';
+import Navbar from '@/components/bars/navbar.component';
 import CTAButton from '@/components/buttons/cta-button.component';
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -42,7 +42,7 @@ export default function HeroSection() {
             tablet:px-16
           '
         >
-          <DesktopNavbar />
+          <Navbar />
           <header
             className='
             py-16

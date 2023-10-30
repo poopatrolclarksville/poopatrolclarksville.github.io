@@ -10,50 +10,54 @@ export default function MissionSection() {
         grid-cols-1
         px-4
         py-32
-        laptop:grid-cols-2
         laptop:px-16
         laptop:py-64
       '
     >  
       <header
         className='
-          text-clamp
+          mb-32
           text-center
-          laptop:text-left
-          laptop:max-w-xl
+          tablet:mx-auto
         '
       >
-      <h1
+        <h1
           className='
-            text-6xl
-            laptop:text-8xl 
+            text-4xl
+            tablet:text-6xl
+            laptop:text-7xl 
             font-bold
-            text-gray-900 
           '
         >
-          Our Mission.
+          Our Core Values.
         </h1>
         <p
           className='
-            py-16
-            text-4xl
+            pt-16
+            text-3xl
             font-light
             text-gray-600
-            leading-relaxed
+            tablet:text-5xl
           '
         >
-          Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar
-          et feugiat blandit at. In mi viverra elit nunc.
+          Our company is <span className='font-bold'>rooted</span> in
+          these values.
+          <br />
+          <span className='mt-8 flex'>
+           Without them, we cannot provide you excellent service.
+          </span>
         </p>
       </header>
       <dl
         className='
-          grid 
-          grid-cols-1
-          gap-y-24 
-          tablet:gap-y-24
           py-16
-          tablet:px-12
+          grid
+          grid-cols-1
+          gap-y-16
+          tablet:gap-y-24
+          desktop:flex
+          desktop:flex-row
+          desktop:justify-between
         '
       >
         {MISSION_VALUES.map((value) => (

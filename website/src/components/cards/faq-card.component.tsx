@@ -24,7 +24,8 @@ export default function FAQCard(
           text-2xl
           font-bold
           text-gray-900
-          laptop:text-5xl
+          laptop:text-4xl
+
         '
       >
         {title}
@@ -35,8 +36,8 @@ export default function FAQCard(
           font-light
           leading-relaxed
           text-gray-600
-          desktop:line-clamp-[8]
-          desktop:text-clip
+          laptop:line-clamp-[12]
+          laptop:text-clip
         '
       >
        {body}

@@ -63,19 +63,25 @@ export default function BookingForm() {
         gap-y-8
       ">
         <div className='
-          grid
-          grid-cols-1
-          gap-y-8
-          desktop:flex
-          desktop:flex-row
-          desktop:justify-between
-          desktop:items-start
+          flex
+          flex-col
+          space-y-8
+          justify-between
+          items-start
+          laptop:flex-row
+          desktop:space-y-0
         '>
           <FormField
             control={bookingForm.control}
             name="firstName"
             render={({ field }) => (
-              <FormItem>
+              <FormItem 
+                className='
+                  w-full
+                  max-w-2xl
+                  laptop:w-[45%]
+                '
+              >
                 <FormLabel className='
                   text-lg
                   font-semibold
@@ -90,6 +96,32 @@ export default function BookingForm() {
               </FormItem>
             )}
           />
+          <FormField
+            control={bookingForm.control}
+            name="lastName"
+            render={({ field }) => (
+              <FormItem 
+                className='
+                  w-full
+                  max-w-2xl
+                  laptop:w-[45%]
+                '
+              >
+                <FormLabel className='
+                  text-lg
+                  font-semibold
+                  text-gray-900
+                '>
+                  Last Name
+                </FormLabel>
+                <FormControl>
+                  <Input placeholder="Parker" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
           <FormField
             control={bookingForm.control}
             name="email"
@@ -112,19 +144,25 @@ export default function BookingForm() {
               </FormItem>
             )}
           />
-        </div>
         <FormField
           control={bookingForm.control}
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Bio</FormLabel>
+              <FormLabel 
+                className='
+                  text-lg
+                  font-semibold
+                  text-gray-900
+                '
+              >Special Requests</FormLabel>
               <FormControl>
                 <Textarea
                   {...field}
-                  placeholder="Please enter the service type you want and the days
-                  you are available to receive our service. Additionally, insert
-                  any special details you need to tell us..."
+                  placeholder="Please enter the days you are available
+                  to receive our service. Also, include any special 
+                  details you need to tell us regarding the
+                  appointment."
                   className='
                     shadow-inner
                     shadow-gray-200

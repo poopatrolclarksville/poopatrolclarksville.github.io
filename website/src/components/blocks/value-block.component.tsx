@@ -8,35 +8,48 @@ export default function ValueBlock(
   const { name, description } = value;
 
   return (
-    <div key={name} className='relative pl-16'>
+    <div 
+      key={name} 
+      className='
+        px-4
+        tablet:px-12
+      '
+    >
       <dt
         className='
-          text-4xl
-          laptop:text-5xl
-          font-semibold 
-        text-gray-900
+          flex
+          flex-col
+          text-3xl
+          font-bold
+          text-gray-900
+          tablet:text-3xl
         '
       >
-        <div
-          className='
-            absolute 
-            left-0 
-            top-0 
-            flex 
-            h-12 
-            w-12 
-            items-center 
-            justify-center 
-            rounded-lg 
-            bg-indigo-600
-          '
+        <div 
+          className="
+            flex
+            items-center
+          "
         >
-          <value.icon 
-            aria-hidden='true' 
-            className='h-8 w-8 text-white' 
-          />
-        </div>
-        {name}
+          <div
+            className='
+              h-12 
+              w-12
+              flex 
+              items-center
+              justify-center
+              rounded-xl
+              tablet:rounded-lg
+              bg-indigo-600
+            '
+          >
+            <value.icon 
+              aria-hidden='true' 
+              className='h-8 w-8 text-white' 
+            />
+          </div>
+          <span className="pl-4">{name}</span>
+          </div>
       </dt>
       <dd
         className='
@@ -45,6 +58,9 @@ export default function ValueBlock(
           leading-10
         text-gray-600
           font-light
+          tablet:font-light
+          tablet:text-
+          tablet:leading-relaxed
         '
       >
         {description}

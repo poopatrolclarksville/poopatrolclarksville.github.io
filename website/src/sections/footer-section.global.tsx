@@ -19,19 +19,25 @@ export default function Footer() {
         className="
           grid
           grid-cols-1
-          laptop:grid-cols-3
           gap-y-24
-          desktop:gap-y-0
-          desktop:gap-16
+          laptop:grid-cols-3
+          laptop:gap-y-0
+          laptop:gap-x-16
         "
       >
         {/* Contact Info Section */}
-        <article className="space-y-4">
+        <article 
+          className="
+            space-y-4
+            laptop:space-y-0
+          "
+        >
           <p
             className="
               pb-8
-              text-3xl
+              text-4xl
               font-bold
+              laptop:text-3xl
             "
           >
             Contact Information
@@ -48,6 +54,7 @@ export default function Footer() {
               className="
                 text-lg
                 tablet:text-2xl
+                laptop:text-xl
                 font-extralight
                 text-gray-600
               "
@@ -68,6 +75,7 @@ export default function Footer() {
               className="
                 text-lg
                 tablet:text-2xl
+                laptop:text-xl
                 font-extralight
                 text-gray-600
               "
@@ -109,6 +117,7 @@ export default function Footer() {
                   visited:no-underline
                   hover:font-medium
                   hover:text-gray-900
+                  laptop:text-xl
                 "
               >
                 PoopatrolClarksvilleTN
@@ -127,18 +136,17 @@ export default function Footer() {
           <h2
             className="
               pb-8
-              text-3xl
+              text-4xl
               font-bold
+              laptop:text-3xl
             "
           >
             Where To
           </h2>
           <ul
               className="
-                grid
-                h-full
                 list-none
-                grid-cols-1
+                space-y-4
               "
             >
               {FOOTER_NAV_LINKS.map((item) => (
@@ -147,13 +155,19 @@ export default function Footer() {
             </ul>
         </aside>
 
-        <aside className="pt-8">
+        <aside 
+          className="
+            pt-8
+            laptop:pt-0
+          "
+        >
           <article>
             <h2
               className="
               pb-8
-              text-3xl
+              text-4xl
               font-bold
+              laptop:text-3xl
             "
             >
               Satisifed With Our Service?

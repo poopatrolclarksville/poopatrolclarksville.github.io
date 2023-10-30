@@ -1,24 +1,22 @@
 import React from 'react';
 
-import type { PriceDetail } from '../../../lib/types';
+import type { PackageDetails } from '../../../lib/types';
 
 import IconListItem from '@/components/items/icon-list-item.component';
 
 interface PricingCardBodyContentProps {
   hasLeftBorder?: boolean;
   hasRightBorder?: boolean;
-  price: number
-  description: string,
-  priceDetails: PriceDetail[]
+  servicePackage: PackageDetails
 }
 
 export default function PricingCardBodyContent({
   hasLeftBorder = false, 
   hasRightBorder = false,
-  price,
-  description,
-  priceDetails,
+  servicePackage
 }: PricingCardBodyContentProps) {
+
+  const { description, price, details } = servicePackage;
 
   let rightBorderStyles = hasRightBorder ? 'border-l border-gray-100' : '';
   let leftBorderStyles = hasLeftBorder ? 'border-r border-gray-100' : '';
@@ -66,7 +64,7 @@ export default function PricingCardBodyContent({
               text-gray-900
             '
           >
-            {price} &nbsp;
+            {price.toPrecision(4)} &nbsp;
           </span>
           / pet
         </p>
@@ -90,12 +88,13 @@ export default function PricingCardBodyContent({
             items-start
             justify-start
             py-4
+            desktop:space-y-12
           '
         >
-          {priceDetails.map((detail) => (
+          {details.map((detail) => (
             <IconListItem 
               icon={detail.icon}
-              detailText={detail.text}
+              text={detail.text}
             />
           ))}
         </ul>

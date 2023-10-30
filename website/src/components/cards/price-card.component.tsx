@@ -1,36 +1,48 @@
 import React from 'react';
 
-import { PackageDetails, PriceDetail } from '../../lib/types';
+import type { PackageDetails, PriceDetail } from '@/lib/types'; 
+import IconListItem from '@/components/items/icon-list-item.component';
 
-import PromoBadge from '../badges/promo-badge.component';
-import IconListItem from '../items/icon-list-item.component';
+interface PriceCardProps {
+  hasPackageType?: boolean
+  isContained?: boolean
+  hasRightBorder?: boolean,
+  hasLeftBorder?: boolean,
+  servicePackage: PackageDetails
+}
 
-export default function PriceCard({ 
-  servicePackage 
-}: { servicePackage: PackageDetails }
+export default function PriceCard({
+  hasPackageType = true,
+  isContained = true,
+  hasRightBorder = false,
+  hasLeftBorder= false,
+  servicePackage
+}: PriceCardProps
 ) {
 
-  const {
-    packageType,
-    price,
-    description,
-    details,
-    isPopular,
+  const { 
+    packageType, 
+    description, 
+    price, 
+    details
   } = servicePackage;
 
+  let rightBorderStyles = hasRightBorder ? 'border-l border-gray-100' : '';
+  let leftBorderStyles = hasLeftBorder ? 'border-r border-gray-100' : '';
+  let containedStyles = isContained ? 'rounded-xl border shadow-lg shadow-gray-200' : ''
+    
   return (
     <article
-      className='
+      className={`
         h-96
         w-full
-        rounded-xl
-        px-8
         py-4
-        border
+        px-8
         border-gray-200
-        shadow-lg
-        shadow-gray-200
-      '
+        ${containedStyles}
+        ${rightBorderStyles}
+        ${leftBorderStyles}
+      `}
     >
       <header>
         <div
@@ -47,9 +59,8 @@ export default function PriceCard({
               text-3xl
             '
           >
-            {packageType}
+            {hasPackageType ? packageType : ''}
           </h1>
-          {isPopular ? <PromoBadge /> : null}
         </div>
       </header>
 
@@ -94,12 +105,13 @@ export default function PriceCard({
 
         {/* Decoration */}
         <div
-          className='
-            w-50
+          className={`
+            w-full
+            laptop:w-[30%]
             boder-gray-600
             border-b
             pt-4
-          '
+          `}
         />
 
         {/* Card Body Section */}
@@ -114,12 +126,12 @@ export default function PriceCard({
             space-y-4
           '
         >
-         {details.map((detail: PriceDetail) => (
-           <IconListItem 
-            icon={detail.icon}
-            text={detail.text}
-          />
-         ))}
+         {details.map((detail: PriceDetail) => 
+            <IconListItem 
+              icon={detail.icon}
+              text={detail.text}
+            />
+         )}
         </ul>
       </div>
     </article>

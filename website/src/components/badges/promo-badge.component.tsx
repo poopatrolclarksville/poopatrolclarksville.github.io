@@ -1,24 +1,28 @@
 import React from 'react'
 
-export default function PromoBadge() {
+export default function PromoBadge(
+  { label = '' }: { label: string}
+) {
   return (
     <div
       className='
-        rounded-lg
-        bg-indigo-100
-        px-4
-        py-2
+        bg-indigo-200
+        px-8
+        py-4
         text-indigo-900
+        rounded-lg
+        shadow-lg
+        shadow-indigo-100
       '
     >
-    <p
-      className='
-        text-md
-        font-normal            
-      '
-    >
-      Most Popular
-    </p>
-  </div>
+      <p
+        className='
+          text-xl
+          font-medium
+        '
+      >
+        {label}
+      </p>
+    </div>
   )
 }
